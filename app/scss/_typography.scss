@@ -44,6 +44,9 @@ li {
 
 button {
     color:$pale_blue ;
+    &:hover {
+        color: $white;
+    }
 }
 
 span.dollars {

@@ -42,38 +42,42 @@ main {
     .packselection {
         flex: 1 0 60%;
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         padding: 2.875rem;
         padding-bottom: 2rem;
-        border-bottom: 1px solid $pale_blue;
+        border-bottom: 1px solid #bdccff47;
+        justify-content: space-between;
         @media #{$mq-530-down} {
-            padding: 2.875rem 0.875rem 2rem;
+            padding: 0.875rem 0.875rem 2rem;
+            justify-content: center;
         }
-        .pricing {
+        
+        .price {
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
             align-items: center;
-
             @media #{$mq-530-down} {
-               flex-flow: column;
+                order: 3;
+                margin-top: 30px;
             }
-            .price {
-                display: flex;
-                align-items: center;
-                .dollars {
-                    margin-right: 5px;
-                }
+            .dollars {
+                margin-right: 5px;
             }
         }
+        
         .sliderdiv {
             margin-top: 20px;
+            flex: 1 0 100%;
+            @media #{$mq-530-down} {
+                order: 2;
+            }
             .slider {
                 -webkit-appearance: none;  /* Override default CSS styles */
                 appearance: none;
                 width: 100%; 
                 height: 8px; 
-                background: $light_grayish_blue; 
+                border-radius: 10px;
+                background: rgb(165,243,235);
+                background: linear-gradient(90deg, rgba(165,243,235,1) 40%, rgba(234,238,251,1) 40%);; 
                 outline: none; 
                 opacity: 0.7; 
                 cursor: pointer;
@@ -95,6 +99,10 @@ main {
                     background-image: url(/images/icon-slider.svg);
                     background-repeat: no-repeat;
                     background-position: center;
+                    &:active {
+                        background-color: $strong_cyan_active;
+                        cursor: grabbing;
+                    }
                 }
                 &::-moz-range-thumb {
                     width: 40px; /* Set a specific slider handle width */
@@ -106,6 +114,10 @@ main {
                     background-image: url(/images/icon-slider.svg);
                     background-repeat: no-repeat;
                     background-position: center;
+                    &:active {
+                        background-color: $strong_cyan_active;
+                        cursor: grabbing;
+                    }
                 }
             }
         }
@@ -113,11 +125,13 @@ main {
         .togglediv {
             margin-top: 50px;
             text-align: center;
-            padding-left: 55px;
+            padding-left: 60px;
             @media #{$mq-530-down} {
                 padding-left: 0px; 
+                order: 4;
+                flex: 1 0 100%;
             }
-            @media #{$mq-300-down} {
+            @media #{$mq-360-down} {
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
@@ -131,7 +145,7 @@ main {
                 margin-left: 10px;
                 margin-right: 10px;
 
-                @media #{$mq-300-down} {
+                @media #{$mq-360-down} {
                     transform: rotate(90deg);
                     margin: 15px 0;
                 }
@@ -224,6 +238,11 @@ main {
                         content: "25%";
                     }
                 }
+
+                @media #{$mq-360-down} {
+                    margin-top: 10px;
+                    margin-left: 0px;
+                }
             }
         }
     }
@@ -255,6 +274,7 @@ main {
             border: none;
             border-radius: 30px;
             cursor: pointer;
+            transition-duration: .3s;
             @media #{$mq-530-down} {
                margin-top: 10px;
             }
