@@ -16,7 +16,7 @@ body {
     justify-content: flex-start;
     flex-flow: column;
     background-color: $very_pale_blue;
-    background-image: url(/images/pattern-circles.svg),url(/images/bg-pattern.svg);
+    background-image: url(../../images/pattern-circles.svg),url(../../images/bg-pattern.svg);
     background-repeat: no-repeat,no-repeat;
     background-size: auto,100% 30rem;
     background-position: 50% 70px , left top;
@@ -262,7 +262,7 @@ main {
         }
         .specs {
             ul {
-                list-style-image: url(/images/icon-check.svg);
+                list-style-image: url(../../images/icon-check.svg);
                 padding-left: 18px;
             }
             li {
