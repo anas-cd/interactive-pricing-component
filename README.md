@@ -47,6 +47,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [still workin on it](https://anas-cd.github.io/)
+- Website - [dev.anasali.info](https://dev.anasali.info/)
 - Frontend Mentor - [@anas-cd](https://www.frontendmentor.io/profile/anas-cd)
 - Twitter - [@AnasCd](https://twitter.com/AnasCd)
